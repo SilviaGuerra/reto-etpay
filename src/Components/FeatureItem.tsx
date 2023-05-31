@@ -4,6 +4,7 @@ interface FeatureItemProps {
   icon: string;
   title: string;
   description: string;
+  className?: string;
 }
 
 const FeatureItem = (props: FeatureItemProps) => {

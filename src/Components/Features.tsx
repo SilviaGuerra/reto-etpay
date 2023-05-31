@@ -17,6 +17,7 @@ interface FeaturesProps {
 
 const Features = () => {
   const [showTransition, setShowTransition] = useState(false);
+  const [showOpacity, setShowOpacity] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +30,10 @@ const Features = () => {
 
       if (scrollPercentage >= 20) {
         setShowTransition(true);
+      }
+
+      if (scrollPercentage >= 35) {
+        setShowOpacity(true);
       }
     };
 
@@ -85,10 +90,10 @@ const Features = () => {
           <div className="grid xl:grid-cols-12 grid-cols-1 gap-8 text-center">
             <div className="xl:col-span-2 xl:block hidden"></div>
             <div
-              className={`xl:col-span-8 flex flex-col gap-12 justify-center flex flex-col gap-2 text-center transition-transform transform elemento ${
+              className={`xl:col-span-8 flex flex-col gap-12 justify-center flex flex-col gap-2 text-center transition-transform transform ${
                 showTransition
                   ? "translate-y-0"
-                  : "translate-y-full invisible ease-in out delay-150 duration-800"
+                  : "translate-y-full invisible ease-in-out delay-150 duration-800"
               }`}
             >
               <div className="flex flex-col gap-2 text-center transition-opacity">
@@ -111,7 +116,13 @@ const Features = () => {
             </div>
             <div className="xl:col-span-2 xl:block hidden"></div>
           </div>
-          <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-8 gap-0 md:pt-10 md:pb-6 items-center">
+          <div
+            className={`grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-8 gap-0 md:pt-10 md:pb-6 items-center transition-opacity ${
+              showOpacity
+                ? "opacity-100 ease-in-out delay-200 duration-2000"
+                : "opacity-0"
+            }`}
+          >
             {data.map((node: FeaturesProps) => (
               <FeatureItem
                 icon={node.icon}
