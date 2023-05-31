@@ -11,7 +11,7 @@ const Button = (props: ButtonProps) => (
     className={`
       button transition ease-in-out delay-150 bg-blue-500
       hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500
-      duration-300 flex items-center justify-center rounded-md
+      duration-200 flex items-center justify-center rounded-md
       bg-primary-600 text-white font-semibold 
       ${
         props.size === "lg"
@@ -19,6 +19,8 @@ const Button = (props: ButtonProps) => (
           : "px-4 py-2.5 text-body-sm"
       }`}
     href={props.link}
+    target="_blank"
+    rel="noopener noreferrer"
   >
     {props.label}
   </a>

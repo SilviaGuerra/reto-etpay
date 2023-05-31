@@ -10,7 +10,7 @@ const Header = () => {
           <div className="flex flex-row gap-8 items-center">
             <img className="h-8 w-auto" src={Logo} alt="Logo" />
           </div>
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-row gap-4 z-50">
             <Button link="/" label="Get Early Access" />
           </div>
         </div>

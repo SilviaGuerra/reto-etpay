@@ -8,9 +8,9 @@ import Footer from "./Components/Footer";
 
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div className={`App`}>
       <Header />
       <Fold />
       <Features />
@@ -19,6 +19,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
