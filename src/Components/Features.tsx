@@ -119,7 +119,7 @@ const Features = () => {
           <div
             className={`grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-8 gap-0 md:pt-10 md:pb-6 items-center transition-opacity ${
               showOpacity
-                ? "opacity-100 ease-in-out delay-200 duration-2000"
+                ? "opacity-100 ease-in-out delay-200 duration-800"
                 : "opacity-0"
             }`}
           >
