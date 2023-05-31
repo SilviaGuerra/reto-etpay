@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import FeatureItem from "./FeatureItem";
 import VideoImg from "../images/video-thumbnail.png";
 import VideoPlay from "../images/video-play.svg";
@@ -16,6 +16,29 @@ interface FeaturesProps {
 }
 
 const Features = () => {
+  const [showTransition, setShowTransition] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = document.documentElement.clientHeight;
+      const scrollableHeight = scrollHeight - clientHeight;
+      const scrollPercentage = (scrollTop / scrollableHeight) * 100;
+
+      if (scrollPercentage >= 20) {
+        setShowTransition(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const data = [
     {
       icon: Icon1,
@@ -56,13 +79,19 @@ const Features = () => {
   ];
 
   return (
-    <div>
-      <div className="container mx-auto">
+    <>
+      <section className="container mx-auto">
         <div className="flex flex-col gap-12 md:py-24 py-12">
           <div className="grid xl:grid-cols-12 grid-cols-1 gap-8 text-center">
             <div className="xl:col-span-2 xl:block hidden"></div>
-            <div className="xl:col-span-8 flex flex-col gap-12 justify-center">
-              <div className="flex flex-col gap-2 text-center">
+            <div
+              className={`xl:col-span-8 flex flex-col gap-12 justify-center flex flex-col gap-2 text-center transition-transform transform elemento ${
+                showTransition
+                  ? "translate-y-0"
+                  : "translate-y-full invisible ease-in out delay-150 duration-800"
+              }`}
+            >
+              <div className="flex flex-col gap-2 text-center transition-opacity">
                 <h3 className="lg:text-display-xl md:text-display-lg text-display-md font-semibold">
                   All-in-one Event Platform
                 </h3>
@@ -92,8 +121,8 @@ const Features = () => {
             ))}
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 };
 
