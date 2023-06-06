@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import FeatureItem from "./FeatureItem";
-import VideoImg from "../images/video-thumbnail.png";
-import VideoPlay from "../images/video-play.svg";
-import Icon1 from "../images/feature-icons/01.svg";
-import Icon2 from "../images/feature-icons/02.svg";
-import Icon3 from "../images/feature-icons/03.svg";
-import Icon4 from "../images/feature-icons/04.svg";
-import Icon5 from "../images/feature-icons/05.svg";
-import Icon6 from "../images/feature-icons/06.svg";
+import VideoImg from "../Assets/video-thumbnail.png";
+import VideoPlay from "../Assets/video-play.svg";
+import Icon1 from "../Assets/feature-icons/01.svg";
+import Icon2 from "../Assets/feature-icons/02.svg";
+import Icon3 from "../Assets/feature-icons/03.svg";
+import Icon4 from "../Assets/feature-icons/04.svg";
+import Icon5 from "../Assets/feature-icons/05.svg";
+import Icon6 from "../Assets/feature-icons/06.svg";
 
 interface FeaturesProps {
   icon: string;

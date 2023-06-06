@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
-import Mockups from "../images/mockups.svg";
+import Mockups from "../Assets/mockups.svg";
 
 const Fold = () => {
   const [isOpen, setIsOpen] = useState(false);

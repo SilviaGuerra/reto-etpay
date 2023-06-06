@@ -1,12 +1,12 @@
 import React from "react";
-import CirleBgk from "../images/circle-integrations.svg";
-import SlackLogo from "../images/integration-logos/01-slack.svg";
-import QBLogo from "../images/integration-logos/02-quickbooks.svg";
-import MailChimplogo from "../images/integration-logos/03-mailchimp.svg";
-import HubSpotLogo from "../images/integration-logos/04-hubspot.svg";
-import ZapierLogo from "../images/integration-logos/05-zapier.svg";
-import GAnalyticsLogo from "../images/integration-logos/06-google-analytics.svg";
-import MarketoLogo from "../images/integration-logos/07-marketo.svg";
+import CirleBgk from "../Assets/circle-integrations.svg";
+import SlackLogo from "../Assets/integration-logos/01-slack.svg";
+import QBLogo from "../Assets/integration-logos/02-quickbooks.svg";
+import MailChimplogo from "../Assets/integration-logos/03-mailchimp.svg";
+import HubSpotLogo from "../Assets/integration-logos/04-hubspot.svg";
+import ZapierLogo from "../Assets/integration-logos/05-zapier.svg";
+import GAnalyticsLogo from "../Assets/integration-logos/06-google-analytics.svg";
+import MarketoLogo from "../Assets/integration-logos/07-marketo.svg";
 
 interface IntegrateProps {
   publicURL: string;

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Logomark from "../images/logos/logomark.svg";
+import Logomark from "../Assets/logos/logomark.svg";
 
 const Footer = () => (
   <footer className="bg-neutral-900 text-white">
