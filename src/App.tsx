@@ -1,4 +1,6 @@
 import React from "react";
+import { Provider } from "react-redux";
+import store from "./Components/Store";
 import Header from "./Components/Header";
 import Fold from "./Components/Fold";
 import Features from "./Components/Features";
@@ -10,14 +12,14 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div className={`App`}>
+    <Provider className="App" store={store}>
       <Header />
       <Fold />
       <Features />
       <Integrations />
       <CreateEvent />
       <Footer />
-    </div>
+    </Provider>
   );
 };
 
